@@ -1,0 +1,101 @@
+{
+  "name": "tamex",
+  "scripts": {
+    "postdeploy": "OK_TO_SEED=true bundle exec rails db:migrate data:migrate"
+  },
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_REGION": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "S3_BUCKET_NAME": {
+      "required": true
+    },
+    "GOOGLE_API_KEY": {
+      "required": true
+    },
+    "HEROKU_PARENT_APP_NAME": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true,
+      "value": "production"
+    },
+    "RAILS_ENV": {
+      "required": true,
+      "value": "production"
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true,
+      "generator": "secret"
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "HOST": {
+      "required": true
+    },
+    "RACK_TIMEOUT_SERVICE_TIMEOUT": {
+      "required": true
+    },
+    "CONTACT_EMAIL": {
+      "required": true
+    },
+    "COVERAGE": {
+      "required": true,
+      "value": "true"
+    },
+    "ENABLE_SOLR": {
+      "required": true
+    },
+    "SOLR_HOST": {
+      "required": true
+    },
+    "SOLR_PATH": {
+      "required": true
+    },
+    "ENABLE_AUTOCOMPLETE": {
+      "required": true
+    },
+    "GOOGLE_MAPS_API_KEY": {
+      "required": true
+    },
+    "MEMCACHEDCLOUD_PASSWORD": {
+      "required": true
+    },
+    "MEMCACHEDCLOUD_SERVERS": {
+      "required": true
+    },
+    "MEMCACHEDCLOUD_USERNAME": {
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-redis",
+    "redistogo:nano",
+    "papertrail:choklad"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs",
+      "url": "heroku/ruby"
+    }
+  ]
+}

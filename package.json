@@ -1,0 +1,13 @@
+{
+  "name": "tamex",
+  "private": true,
+  "dependencies": {},
+  "engines" : {
+    "node": ">= 0.10",
+    "yarn": "1.2.1"
+  },
+  "buildpacks": [
+    { "url": "heroku/nodejs" },
+    { "url": "heroku/ruby" }
+  ]
+}
